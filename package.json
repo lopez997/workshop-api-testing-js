@@ -24,5 +24,10 @@
   "devDependencies": {
     "chai": "^4.2.0",
     "mocha": "^7.0.1"
+  },
+  "dependencies": {
+    "http-status-codes": "^1.4.0",
+    "superagent": "^5.2.2",
+    "superagent-promise": "^1.1.0"
   }
 }
