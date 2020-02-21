@@ -25,24 +25,42 @@ describe('First Api Tests', () => {
     expect(response.body.args).to.eql(query);
   });
 
-  it('Consume PATCH Service', async () => {
-    const response = await agent.patch('https://httpbin.org/patch');
+  it('Consume PATCH Service with query parameters', async () => {
+    const query = {
+      name: 'Juan',
+      age: '23',
+      city: 'Cali'
+    };
+
+    const response = await agent.patch('https://httpbin.org/patch').query(query);
 
     expect(response.status).to.equal(statusCode.OK);
-    expect(response.body).to.have.property('origin');
+    expect(response.body.args).to.eql(query);
   });
 
-  it('Consume PUT Service', async () => {
-    const response = await agent.put('https://httpbin.org/put');
+  it('Consume PUT Service with query parameters', async () => {
+    const query = {
+      name: 'Carvi',
+      age: '22',
+      city: 'Cali'
+    };
+
+    const response = await agent.put('https://httpbin.org/put').query(query);
 
     expect(response.status).to.equal(statusCode.OK);
-    expect(response.body).to.have.property('origin');
+    expect(response.body.args).to.eql(query);
   });
 
-  it('Consume DELETE Service', async () => {
-    const response = await agent.delete('https://httpbin.org/delete');
+  it('Consume DELETE Service with query parameters', async () => {
+    const query = {
+      name: 'Kassandra',
+      age: '25',
+      city: 'Medellin'
+    };
+
+    const response = await agent.delete('https://httpbin.org/delete').query(query);
 
     expect(response.status).to.equal(statusCode.OK);
-    expect(response.body).to.have.property('origin');
+    expect(response.body.args).to.eql(query);
   });
 });
