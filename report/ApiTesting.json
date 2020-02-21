@@ -1,0 +1,178 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 5,
+    "passes": 5,
+    "pending": 0,
+    "failures": 0,
+    "start": "2020-02-21T12:21:04.026Z",
+    "end": "2020-02-21T12:21:06.279Z",
+    "duration": 2253,
+    "testsRegistered": 5,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "a84bcc3d-2066-4156-a38d-c517d2d274da",
+      "title": "",
+      "fullFile": "",
+      "file": "",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "b8f85d29-5376-44fd-8972-33572281cdb1",
+          "title": "First Api Tests",
+          "fullFile": "C:\\Users\\usuario\\Documents\\GitHub\\workshop-api-testing-js\\test\\MyFirstApiConsume.test.js",
+          "file": "\\test\\MyFirstApiConsume.test.js",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Consume GET Service",
+              "fullTitle": "First Api Tests Consume GET Service",
+              "timedOut": false,
+              "duration": 561,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const response = await agent.get('https://httpbin.org/ip');\n      \nexpect(response.status).to.equal(statusCode.OK);\nexpect(response.body).to.have.property('origin');",
+              "err": {},
+              "uuid": "dc61d79a-084f-4663-8c8f-3e9c494a2556",
+              "parentUUID": "b8f85d29-5376-44fd-8972-33572281cdb1",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Consume GET Service with query parameters",
+              "fullTitle": "First Api Tests Consume GET Service with query parameters",
+              "timedOut": false,
+              "duration": 368,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const query = {\n  name: 'John',\n  age: '31',\n  city: 'New York'\n};\n      \nconst response = await agent.get('https://httpbin.org/get').query(query);\n      \nexpect(response.status).to.equal(statusCode.OK);\nexpect(response.body.args).to.eql(query);",
+              "err": {},
+              "uuid": "d1c31d13-aa25-46e2-a75d-79f595c0751a",
+              "parentUUID": "b8f85d29-5376-44fd-8972-33572281cdb1",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Consume PATCH Service",
+              "fullTitle": "First Api Tests Consume PATCH Service",
+              "timedOut": false,
+              "duration": 372,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const response = await agent.patch('https://httpbin.org/patch');\n      \nexpect(response.status).to.equal(statusCode.OK);\nexpect(response.body).to.have.property('origin');",
+              "err": {},
+              "uuid": "504d445c-489e-4e6e-a66c-3b88966d6b4e",
+              "parentUUID": "b8f85d29-5376-44fd-8972-33572281cdb1",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Consume PUT Service",
+              "fullTitle": "First Api Tests Consume PUT Service",
+              "timedOut": false,
+              "duration": 496,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const response = await agent.put('https://httpbin.org/put');\n      \nexpect(response.status).to.equal(statusCode.OK);\nexpect(response.body).to.have.property('origin');",
+              "err": {},
+              "uuid": "85fcf46a-d5b9-41f6-ba2f-daa98cc1fc64",
+              "parentUUID": "b8f85d29-5376-44fd-8972-33572281cdb1",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Consume DELETE Service",
+              "fullTitle": "First Api Tests Consume DELETE Service",
+              "timedOut": false,
+              "duration": 415,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const response = await agent.delete('https://httpbin.org/delete');\n      \nexpect(response.status).to.equal(statusCode.OK);\nexpect(response.body).to.have.property('origin');",
+              "err": {},
+              "uuid": "41268503-9f0b-46c6-b0fa-54d30ea71508",
+              "parentUUID": "b8f85d29-5376-44fd-8972-33572281cdb1",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "dc61d79a-084f-4663-8c8f-3e9c494a2556",
+            "d1c31d13-aa25-46e2-a75d-79f595c0751a",
+            "504d445c-489e-4e6e-a66c-3b88966d6b4e",
+            "85fcf46a-d5b9-41f6-ba2f-daa98cc1fc64",
+            "41268503-9f0b-46c6-b0fa-54d30ea71508"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 2212,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 5000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 5000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "ApiTesting",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false
+      },
+      "version": "4.1.0"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "report",
+        "reportFilename": "ApiTesting"
+      },
+      "version": "4.1.0"
+    }
+  }
+}
